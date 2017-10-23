@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+    <script src="/js/jquery.js"></script>
+    <script src="./jquery.svg/jquery.svg.js"></script>
+    <script src="./Jascl.js"></script>
+    <meta charset="utf-8">
+    
+</head>  
+ 
+<body>
+        <div id='test_svg'></div>
+        <div id='test_svg_2'></div>
+        <div id='test_svg_3'></div>
+        <div id='test_svg_4'></div>
+        <div id='test_svg_5'></div>
+        <script>
+            var config = 
+            {
+                container: "test_svg",
+                chart_style: 'line',
+                chart_title: "Just another stupid chart",
+                chart_size: '640x480',
+                y_axis_ticks: 5,
+                y_axis_text: 'runtime in minutes',
+                font_size: 12,
+                data :  [
+                        {"A":98,"B":140,"C":390,"D":283,"E":229 },
+                        {"A":208,"B":151,"C":324,"D":52,"E":288 },
+                        {"A":136,"B":172,"C":345,"D":352,"E":56 },
+                        {"A":259,"B":352,"C":160,"D":79,"E":272 },
+                        {"A":217,"B":123,"C":392,"D":373,"E":290 },
+                        {"A":110,"B":373,"C":246,"D":398,"E":366 },
+                        {"A":161,"B":297,"C":82,"D":218,"E":363 },
+                        {"A":274,"B":252,"C":73,"D":81,"E":316 },
+                        {"A":63,"B":177,"C":211,"D":216,"E":175 },
+                        {"A":227,"B":150,"C":88,"D":338,"E":135 },
+                        {"A":253,"B":314,"C":265,"D":140,"E":204 },
+                        {"A":114,"B":357,"C":227,"D":105,"E":150 },
+                        {"A":110,"B":373,"C":246,"D":398,"E":366 }
+                        ],
+                series: ["201603","201604","201605","201606","201607","201608","201609","201610","201611","201612","201701","201702","201703"],
+                series_rotation:45,
+                colors: ['red','green','blue','yellow','coral'],
+                legend: false,
+                data_table:true
+                
+            }
+            
+            var config2 = 
+            {
+                container: "test_svg_2",
+                chart_style: 'grouped_bar',
+                chart_title: "Just another stupid chart",
+                chart_size: '640x480',
+                y_axis_ticks: 20,
+                y_axis_text: 'runtime',
+                font_size: 12,
+                data :  [
+                        {"A":98,"B":140,"C":390,"D":283,"E":229 },
+                        {"A":208,"B":151,"C":324,"D":52,"E":288 },
+                        {"A":136,"B":172,"C":345,"D":352,"E":56 },
+                        {"A":259,"B":352,"C":160,"D":79,"E":272 },
+                        {"A":217,"B":123,"C":392,"D":373,"E":290 },
+                        {"A":110,"B":373,"C":246,"D":398,"E":366 },
+                        {"A":161,"B":297,"C":82,"D":218,"E":363 },
+                        {"A":274,"B":252,"C":73,"D":81,"E":316 },
+                        {"A":63,"B":177,"C":211,"D":216,"E":175 },
+                        {"A":227,"B":150,"C":88,"D":338,"E":135 },
+                        {"A":253,"B":314,"C":265,"D":140,"E":204 },
+                        {"A":114,"B":357,"C":227,"D":105,"E":150 },
+                        {"A":110,"B":373,"C":246,"D":398,"E":366 }
+                        ],
+                series: ["2016.03","2016.04","2016.05","2016.06","2016.07","2016.08","2016.09","2016.10","2016.11","2016.12","2017.01","2017.02","2017.03"],
+                series_rotation:45,
+                colors: ['red','green','blue','yellow','coral'],
+                legend: false,
+                data_table:true
+            }
+                        
+            var config3 = 
+            {
+                container: "test_svg_3",
+                chart_style: 'single_bar',
+                chart_title: "Just another stupid chart",
+                chart_size: '640x480',
+                y_axis_ticks: 10,
+                y_axis_text: 'values in decimal',
+                font_size: 12,
+                data :  [
+                        {'A' : -50,'B' : 100,'C' : 150,'D': 200, 'E': 250,'F':10, 'G':88}
+                        ],
+                colors: ['red','green','blue','yellow','coral','lightGreen','crimson'],
+                legend: false,
+                data_table:true
+            }
+            
+            var config4 = 
+            {
+                container: "test_svg_4",
+                chart_style: 'pie',
+                chart_title: "Just another stupid chart",
+                chart_size: '480x480',
+                y_axis_ticks: 20,
+                y_axis_text: 'values in decimal',
+                font_size: 12,
+                data :  [
+                        {'A' : 50,'B' : 50,'C':50,'D':50,'E':50}
+                        ],
+                colors: ['red','green','blue','yellow','coral','lightGreen','crimson'],
+                legend: false,
+                data_table:true
+            }
+            
+           
+            var chart = new Jascl(config)
+            var chart2 = new Jascl(config2)
+            var chart3 = new Jascl(config3)
+            var chart4 = new Jascl(config4)
+         </script>
+</body>
+
+</html>
+
